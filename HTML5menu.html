@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<style>
+
+#world {
+	width:320px; height:200px;
+	position:relative;margin:auto; padding:100px;
+	-webkit-perspective:1000;z
+}
+
+#album {
+	width:320px; height:200px; position:absolute;
+	-webkit-transform-style:preserve-3d;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:2s;
+}
+
+.picselect1{-webkit-transform:rotateY(0deg);}
+.picselect2{-webkit-transform:rotateY(-72deg);}
+.picselect3{-webkit-transform:rotateY(-144deg);}
+.picselect4{-webkit-transform:rotateY(-216deg);}
+.picselect5{-webkit-transform:rotateY(-288deg);}
+
+img{width: 320px;height:200px;position:absolute;}
+
+#picture1{-webkit-transform:rotateY(0deg) translateZ(280px);}
+#picture2{-webkit-transform:rotateY(72deg) translateZ(280px);}
+#picture3{-webkit-transform:rotateY(144deg) translateZ(280px);}
+#picture4{-webkit-transform:rotateY(216deg) translateZ(280px);}
+#picture5{-webkit-transform:rotateY(288deg) translateZ(280px);}
+</style>
+
+<title>HTML5</title>
+</head>
+
+<body>
+	<div id="world">
+    	<div id="album" class="picselect1">
+        	<img src="images/abstract1.jpg" id="picture1">
+            <img src="images/abstract2.jpg" id="picture2">
+            <img src="images/abstract3.jpg" id="picture3">
+            <img src="images/abstract4.jpg" id="picture4">
+            <img src="images/abstract5.jpg" id="picture5">
+        </div>
+    </div>
+    
+    <div style="text-align:center;">
+   		<button id="button1" style="padding:5px;font-size:14px;">Picture1</button>
+        <button id="button2" style="padding:5px;font-size:14px;">Picture2</button>
+        <button id="button3" style="padding:5px;font-size:14px;">Picture3</button>
+        <button id="button4" style="padding:5px;font-size:14px;">Picture4</button>
+        <button id="button5" style="padding:5px;font-size:14px;">Picture5</button>
+	</div>
+    
+    <script type="text/javascript">
+		button1.onclick=function(){album.className="picselect1";}
+		button2.onclick=function(){album.className="picselect2";}
+		button3.onclick=function(){album.className="picselect3";}
+		button4.onclick=function(){album.className="picselect4";}
+		button5.onclick=function(){album.className="picselect5";}
+	</script>
+</body>
+</html>
